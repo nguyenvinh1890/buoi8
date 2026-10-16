@@ -1,0 +1,88 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.app-header.align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.app-header.align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.app-header.align-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.app-header-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.app-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-light);
+}
+
+.app-header-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-full);
+}
+
+.app-header-title {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header.size-sm .app-header-title {
+  font-size: 1.25rem;
+}
+
+.app-header.size-md .app-header-title {
+  font-size: 1.75rem;
+}
+
+.app-header.size-lg .app-header-title {
+  font-size: 2.25rem;
+}
+
+.app-header-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  margin-top: 0.4rem;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .app-header.size-lg .app-header-title {
+    font-size: 1.85rem;
+  }
+  .app-header.size-md .app-header-title {
+    font-size: 1.5rem;
+  }
+}

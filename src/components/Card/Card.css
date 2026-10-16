@@ -1,0 +1,92 @@
+.app-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+/* Glass Variant */
+.app-card.variant-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Solid Variant */
+.app-card.variant-solid {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow-md);
+}
+
+/* Elevated Variant */
+.app-card.variant-elevated {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Glow Effect */
+.app-card.has-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+}
+
+.app-card.has-glow {
+  box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.3), var(--shadow-lg);
+}
+
+/* Padding scale */
+.app-card.pad-none .app-card-body {
+  padding: 0;
+}
+.app-card.pad-sm .app-card-body {
+  padding: 1rem;
+}
+.app-card.pad-md .app-card-body {
+  padding: 1.5rem;
+}
+.app-card.pad-lg .app-card-body {
+  padding: 2.25rem;
+}
+
+/* Header */
+.app-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.25rem 0 2.25rem;
+  border-bottom: 1px solid transparent;
+}
+
+.app-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Footer */
+.app-card-footer {
+  padding: 1rem 2.25rem 1.5rem 2.25rem;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 640px) {
+  .app-card.pad-lg .app-card-body {
+    padding: 1.5rem;
+  }
+  .app-card-header,
+  .app-card-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
